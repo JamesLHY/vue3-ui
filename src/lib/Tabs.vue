@@ -17,6 +17,7 @@
         class="gulu-tabs-content-item"
         :class="{selected:c.props.title === selected}"
         v-for="c in defaults"
+        v-bind:key="c"
         :is="c"
       />
     </div>
