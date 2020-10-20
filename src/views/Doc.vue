@@ -98,7 +98,7 @@ export default {
     z-index: 10;
     flex-grow: 1;
     padding: 16px;
-    background: #f5f5f5;
+    background: white;
   }
 }
 
