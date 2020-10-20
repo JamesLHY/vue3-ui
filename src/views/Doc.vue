@@ -98,7 +98,7 @@ export default {
     z-index: 10;
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
+    background: #f5f5f5;
   }
 }
 
@@ -113,12 +113,13 @@ aside {
 
   > h2 {
     margin-bottom: 4px;
+    padding: 0 0 0 10px;
   }
 
   > ol {
-    a
-     > li {
+    a > li {
       margin: 10px 0;
+      padding: 0 0 0 10px;
     }
   }
 
