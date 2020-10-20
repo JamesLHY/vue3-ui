@@ -56,17 +56,7 @@ export default {
   position: relative;
   color: #1890ff;
 }
-.router-link-active::before {
-  z-index: -1;
-  position: fixed;
-  display: block;
-  clear: both;
-  content: "";
-  width: 100%;
-  height: 2em;
-  background: #e6f7ff;
-  transform: translateY(-0.5em);
-}
+
 
 .layout {
   display: flex;
@@ -95,7 +85,7 @@ export default {
   }
 
   > main {
-    z-index: 10;
+   
     flex-grow: 1;
     padding: 16px;
     background: white;
@@ -103,6 +93,8 @@ export default {
 }
 
 aside {
+    background: #f0f0f0;
+    border-right: 1px solid #c7c9cc;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -110,7 +102,7 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
-
+z-index: 20;
   > h2 {
     margin-bottom: 4px;
     padding: 0 0 0 10px;

@@ -3,7 +3,7 @@
 import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
 export default {
-   
+    
     vueCustomBlockTransforms: {
       demo: (options) => {
         const { code, path } = options
@@ -19,4 +19,4 @@ export default {
         }`.trim()
       }
     }
-  }; 
+  };
