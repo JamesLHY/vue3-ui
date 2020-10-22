@@ -15,7 +15,9 @@
   &lt;div&gt;&lt;Button&gt;按钮&lt;/Button&gt;&lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
+
  import {Button, Tabs,Tab, Switch, Dialog,openDialog} from "vue3-pure-wheel"
+
   export default {
     components: {Button}
   }

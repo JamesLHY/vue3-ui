@@ -1,10 +1,15 @@
 {
   "name": "vue3-pure-wheel",
   "version": "0.0.1",
+<<<<<<< HEAD
   "files": [
     "dist/lib/*"
   ],
   "main": "dist/lib/gulu.js",
+=======
+  "files":["dist/lib/*"],
+  "main":"dist/lib/gulu.js",
+>>>>>>> ee61121987e2b80175eec17a1f3a8712bb7f7b4e
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -12,13 +17,24 @@
   "dependencies": {
     "github-markdown-css": "^4.0.0",
     "prismjs": "^1.22.0",
+<<<<<<< HEAD
    
+=======
+    "rollup-plugin-esbuild": "^2.5.2",
+    "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^6.0.0-beta.10",
+>>>>>>> ee61121987e2b80175eec17a1f3a8712bb7f7b4e
     "vue": "^3.0.0-rc.1",
     "vue-router": "4.0.0-beta.3"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.1",
     "sass": "^1.27.0",
+<<<<<<< HEAD
     "vite": "^1.0.0-rc.4"
+=======
+    "vite": "^1.0.0-rc.1"
+>>>>>>> ee61121987e2b80175eec17a1f3a8712bb7f7b4e
   }
 }
