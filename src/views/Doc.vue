@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
     <TopNav :toggleMenuButtonVisible="true" class="nav" />
-    <div class="content">
-      <aside v-if="asideVisible">
+    <div class="content" v-on:click="hidePanel">
+      <aside id="myPanel" v-if="asideVisible">
         <h2>文档</h2>
         <ol>
           <router-link to="/Doc/Intro">
@@ -47,16 +47,30 @@ export default {
   },
   setup() {
     const asideVisible = inject<Ref<boolean>>("asideVisible");
-    return { asideVisible };
+    const hidePanel = function (event) {
+      var sp = document.getElementById("myPanel");
+
+      if (sp) {
+        if (!sp.contains(event.target)) {
+          //这句是说如果我们点击到了id为myPanel以外的区域
+          this.asideVisible = false;
+          
+        }
+      }
+    };
+    return { asideVisible,hidePanel };
   },
 };
 </script>
 <style lang="scss" scoped>
+
 .router-link-active {
   position: relative;
   color: #1890ff;
+  > li {
+    background: #f0faff;
+  }
 }
-
 
 .layout {
   display: flex;
@@ -85,16 +99,23 @@ export default {
   }
 
   > main {
-   
     flex-grow: 1;
     padding: 16px;
     background: white;
   }
 }
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
 
+  to {
+    transform: translateX(0%);
+  }
+}
 aside {
-    background: #f0f0f0;
-    border-right: 1px solid #c7c9cc;
+  background: #f0f0f0;
+  border-right: 1px solid #c7c9cc;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -102,7 +123,8 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
-z-index: 20;
+  z-index: 20;
+  animation: slidein 1s;
   > h2 {
     margin-bottom: 4px;
     padding: 0 0 0 10px;
@@ -111,7 +133,7 @@ z-index: 20;
   > ol {
     a > li {
       margin: 10px 0;
-      padding: 0 0 0 10px;
+      padding: 5px 0 5px 10px;
     }
   }
 

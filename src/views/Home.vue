@@ -2,10 +2,10 @@
   <div class="topnavAndBanner">
     <TopNav />
     <div class="banner">
-      <h1>UI</h1>
-      <h2>UI detail</h2>
+      <h1>Vue3-pure-wheel</h1>
+      <h3>一款基于Vu3和Typescript的UI轮子库</h3>
       <p class="actions">
-        <a href="https://github.com/JamesLHY/vue3-ui">github</a>
+        <a href="https://github.com/JamesLHY/vue3-ui">Github</a>
         <router-link to="/doc">Start</router-link>
       </p>
     </div>
@@ -112,7 +112,7 @@ export default {
   flex-direction: column;
 
   > .actions {
-    padding: 8px 0;
+    padding: 14px 0;
     a {
       background: #348dfe;
       margin: 0 8px;
